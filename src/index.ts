@@ -10,11 +10,12 @@ const handler = async (req: Request, res: Response, next: NextFunction) => {
     apiKey: process.env.OPENAI_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
-  const { prompt } = req.query;
+  const { ocassion, preferences, recipientRelationShip, recipientLocation } =
+    req.query;
   const response = await openai.createCompletion({
-    model: "text-curie-001",
-    prompt: `Help in special gift recommendation. Ask questions about the occasion then the receiver's hobbies, interests, likes and dislikes and then the location that they are in one by one and then give specific ideas and suggestions and ask them to choose an option. Once they do then give more ideas and suggestions related to that selected option. If they belong to India then recommend these sites for personalised gifts - OyeHappy, Archies India.\n${prompt}`,
-    max_tokens: 200,
+    model: "text-davinci-003",
+    prompt: `Help in special gift recommendation for ${ocassion} for ${recipientRelationShip} in ${recipientLocation}. Their preferences include ${preferences}. Also recommend where to get them from and if the location is India then suggest websites like oyehappy, winni and others along with some products or services from those platforms. Overall be as detailed and specific about the suggestions as you can and limit them to 5 most accurate ones.`,
+    max_tokens: 256,
     temperature: 0.7,
   });
   res.send(response.data);
