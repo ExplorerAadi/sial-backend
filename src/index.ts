@@ -13,7 +13,7 @@ const handler = async (req: Request, res: Response, next: NextFunction) => {
   const { ocassion, preferences, recipientRelationShip, budget } = req.query;
   const response = await openai.createCompletion({
     model: "text-davinci-003",
-    prompt: `Help in special gift recommendations for ${ocassion} for ${recipientRelationShip}. Their preferences include ${preferences}. The budget is ${budget} INR. Recommend products and services from platforms that are easily available in India. Overall be as detailed about the suggestions as you can and limit them to 5 most accurate ones. Don't mention price explicitly in responses.`,
+    prompt: `Generate thoughtful gift recommendations for ${recipientRelationShip} on ${ocassion} whether materialistic (e.g. a handbag) or an experience (e.g. a spa session from UC). Their preferences, hobbies and interests are - ${preferences}. The budget is under ${budget} INR. Consider all this and recommend options from platforms that are easily available in India. Be as detailed about the suggestions and platforms as you can with links where necessary and limit them to 5 most accurate ones. Don't mention price explicitly in responses.`,
     max_tokens: 290,
     temperature: 0.7,
   });
