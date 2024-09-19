@@ -404,9 +404,9 @@ finalhandler@1.2.0:
     unpipe "~1.0.0"
 
 follow-redirects@^1.14.8:
-  version "1.15.2"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
-  integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
+  version "1.15.9"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.9.tgz#a604fa10e443bf98ca94228d9eebcc2e8a2c8ee1"
+  integrity sha512-gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ==
 
 form-data@^4.0.0:
   version "4.0.0"
@@ -632,9 +632,9 @@ on-finished@2.4.1:
     ee-first "1.1.1"
 
 openai@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/openai/-/openai-3.1.0.tgz#13bfb228cf777155b882c2deb3a03bc5094cb7b3"
-  integrity sha512-v5kKFH5o+8ld+t0arudj833Mgm3GcgBnbyN9946bj6u7bvel4Yg6YFz2A4HLIYDzmMjIo0s6vSG9x73kOwvdCg==
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/openai/-/openai-3.3.0.tgz#a6408016ad0945738e1febf43f2fccca83a3f532"
+  integrity sha512-uqxI/Au+aPRnsaQRe8CojU0eCR7I0mBiKjD3sNMzY6DaC1ZVrc85u98mtJW6voDug8fgGN+DIZmTDxTthxb7dQ==
   dependencies:
     axios "^0.26.0"
     form-data "^4.0.0"
